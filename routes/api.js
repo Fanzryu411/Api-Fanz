@@ -285,7 +285,7 @@ router.get('/tiktod', async (req, res, next) => {
 
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
      if (!url) return res.json(loghandler.noturl)
 
      TikTokScraper.getVideoMeta(url, options)
@@ -307,7 +307,7 @@ router.get('/tiktod/stalk', async (req, res, next) => {
         username = req.query.username
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
     if (!username) return res.json(loghandler.notusername)
 
 
@@ -356,7 +356,7 @@ router.get('/infonpm', async (req, res, next) => {
             host = req.hostname
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
     if (!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
 
        fetch(encodeURI(`https://registry.npmjs.org/${query}`))
@@ -381,7 +381,7 @@ router.get('/short/tiny', async (req, res, next) => {
         url = req.query.url
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
      if (!url) return res.json(loghandler.noturl)
 
      request(`https://tinyurl.com/api-create.php?url=${url}`, function (error, response, body) {
@@ -407,7 +407,7 @@ router.get('/base', async (req, res, next) => {
 		decode = req.query.decode,
 		apikeyInput = req.query.apikey;
 		if (!apikeyInput) return res.json(loghandler.notparam)
-		if (apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+		if (apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
 		if (!type) return res.json({status: false, creator, code: 404, message: 'masukan parameter type, type yang tersedia : base64 , base32'})
 		if (type == 'base64' && encode){
 				Base("b64enc", encode)
@@ -460,7 +460,7 @@ router.get('/nulis', async (req, res, next) => {
 	var text = req.query.text,
 		 apikeyInput = req.query.apikey;
 	if(!apikeyInput) return res.json(loghandler.notparam)
-     if(apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+     if(apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
 	 if(!text) return res.json(loghandler.nottext)
 		Nulis(text)
 		 .then(hasil => {
@@ -494,7 +494,7 @@ router.get('/textmaker', async (req, res, next) => {
              apikeyInput = req.query.apikey;
         
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'glitch' && theme != 'google-suggestion') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -584,7 +584,7 @@ router.get('/textmaker/game', async (req, res, next) => {
              apikeyInput = req.query.apikey;
         
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'pubg' && theme != 'battlefield') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -673,7 +673,7 @@ router.get('/textmaker/senja', async (req, res, next) => {
              apikeyInput = req.query.apikey;
         
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'if (apikey != 'FanzOffc') return res.json(loghandler.invalidKey)') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'FanzOffc') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'coffee-cup' && theme != 'coffee-cup2') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
